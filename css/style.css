@@ -21,12 +21,15 @@ body {
 .desktop-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
-    padding-top: 20px;           
+    justify-content: flex-start;
+    padding-top: 20px;
     min-height: 100vh;
-    max-width: 1000px; /* Aquí controlas el tamaño del folder */
-    margin: 0 auto;    /* ESTO lo centra horizontalmente */
-    width: 95%;        /* Esto ayuda a que en tablets no pegue a los bordes */
+    max-width: 1000px;
+    /* Aquí controlas el tamaño del folder */
+    margin: 0 auto;
+    /* ESTO lo centra horizontalmente */
+    width: 95%;
+    /* Esto ayuda a que en tablets no pegue a los bordes */
 }
 
 .brand-header {
@@ -41,13 +44,15 @@ body {
 
 /* --- Estilo de Pestañas (Folder Tabs) --- */
 @keyframes fadeIn {
-    from { 
-        opacity: 0; 
-        transform: translateY(0); /* Cambiado de 10px a 0 */
+    from {
+        opacity: 0;
+        transform: translateY(0);
+        /* Cambiado de 10px a 0 */
     }
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -56,7 +61,8 @@ body {
     gap: 5px;
     padding-left: 20px;
     position: relative;
-    z-index: 2; /* Asegura que estén sobre el borde de la carpeta */
+    z-index: 2;
+    /* Asegura que estén sobre el borde de la carpeta */
 }
 
 .tab-btn {
@@ -71,7 +77,8 @@ body {
     border-radius: 12px 12px 0 0;
     transition: all 0.3s ease;
     opacity: 0.6;
-    margin-bottom: -1px; /* Tapa el borde superior de la carpeta */
+    margin-bottom: -1px;
+    /* Tapa el borde superior de la carpeta */
     display: flex;
     align-items: center;
     gap: 8px;
@@ -91,8 +98,10 @@ body {
     border-top: 1px solid var(--border-color);
     background-color: var(--color-perfil);
     border-radius: 0 25px 25px 25px;
-    padding: 20px; /* Reducimos de 40px a 20px para ganar espacio */
-    min-height: auto; /* IMPORTANTE: Cambia 600px por auto */
+    padding: 20px;
+    /* Reducimos de 40px a 20px para ganar espacio */
+    min-height: auto;
+    /* IMPORTANTE: Cambia 600px por auto */
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     transition: background-color 0.4s ease;
 }
@@ -100,39 +109,43 @@ body {
 .tab-content {
     display: none;
     /* Quitamos el translateY de la animación para evitar saltos */
-    animation: fadeIn 0.4s ease; 
+    animation: fadeIn 0.4s ease;
 }
 
 .tab-content.active {
     display: block !important;
-    background-color: #f2f0eb; /* Tu color de hoja blanca */
-    border: 1px solid rgba(0,0,0,0.1);
+    background-color: #f2f0eb;
+    /* Tu color de hoja blanca */
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 30px;
     border-radius: 8px;
     position: relative;
     z-index: 5;
-    box-shadow: 2px 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 /* -------------------------------------------------------------INICIO */
 .home-cover {
     position: relative;
-    min-height: 500px; /* Un poco más de espacio para la composición */
+    min-height: 500px;
+    /* Un poco más de espacio para la composición */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: visible; /* Permite que sobresalgan un poco si es necesario */
+    overflow: visible;
+    /* Permite que sobresalgan un poco si es necesario */
 }
 
 .cover-icon {
-    width: 150px; /* Ajusta el tamaño a tu gusto */
+    width: 150px;
+    /* Ajusta el tamaño a tu gusto */
     height: auto;
     border-radius: 50%;
     margin-bottom: 20px;
     border: 3px solid #d3c084;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #caratula.tab-content.active {
@@ -146,7 +159,7 @@ body {
 
 .sticker {
     position: absolute;
-    filter: drop-shadow(3px 4px 6px rgba(0,0,0,0.25));
+    filter: drop-shadow(3px 4px 6px rgba(0, 0, 0, 0.25));
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 5;
 }
@@ -167,11 +180,13 @@ body {
 
 /* Parte Superior Centro/Derecha (Clips y Oficina) */
 .s-clip {
-    top: -15px; /* Sobresale un poco del borde */
+    top: -15px;
+    /* Sobresale un poco del borde */
     right: 25%;
     width: 40px;
     transform: rotate(35deg);
-    z-index: 10; /* Por encima de otros elementos */
+    z-index: 10;
+    /* Por encima de otros elementos */
 }
 
 .s-pinza {
@@ -207,7 +222,8 @@ body {
 
 .sticker:hover {
     transform: scale(1.1) rotate(0deg) !important;
-    z-index: 20; /* Se pone al frente al pasar el mouse */
+    z-index: 20;
+    /* Se pone al frente al pasar el mouse */
 }
 
 
@@ -288,29 +304,39 @@ body {
    ========================================== */
 
 @media (max-width: 768px) {
+
     /* 1. Contenedor principal: Quitamos márgenes para ganar cada pixel */
     .desktop-container {
         width: 100%;
         margin: 5px auto;
         padding: 0;
     }
-    
+
 
     /* 2. Pestañas: Ahora permiten scroll horizontal si no caben, evitando que se amontonen */
     .folder-tabs {
         display: flex;
-        gap: 4px; /* Pequeño espacio para que no se peguen */
+        gap: 4px;
+        /* Pequeño espacio para que no se peguen */
         padding-left: 10px;
-        overflow-x: auto; /* IMPORTANTE: permite deslizar las pestañas con el dedo */
-        scrollbar-width: none; /* Oculta la barra en Firefox */
+        overflow-x: auto;
+        /* IMPORTANTE: permite deslizar las pestañas con el dedo */
+        scrollbar-width: none;
+        /* Oculta la barra en Firefox */
         -webkit-overflow-scrolling: touch;
     }
-    
-    .folder-tabs::-webkit-scrollbar { display: none; } /* Oculta la barra en Chrome/Safari */
+
+    .folder-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Oculta la barra en Chrome/Safari */
 
     .tab-btn {
-        padding: 10px 18px; /* Tamaño más cómodo para el dedo */
-        flex-shrink: 0;     /* Evita que se aplasten */
+        padding: 10px 18px;
+        /* Tamaño más cómodo para el dedo */
+        flex-shrink: 0;
+        /* Evita que se aplasten */
         font-size: 0.85rem;
     }
 
@@ -318,41 +344,75 @@ body {
     .folder-content {
         border-radius: 0 15px 0px 0px;
         padding: 30px 15px;
-        min-height: auto; /* Que crezca según el contenido */
+        min-height: auto;
+        /* Que crezca según el contenido */
     }
 
     /* 4. La Carátula: Evitamos que los stickers causen scroll horizontal */
     .home-cover {
         position: relative;
         min-height: 450px;
-        overflow: hidden; /* Corta lo que se salga de la carátula */
+        overflow: hidden;
+        /* Corta lo que se salga de la carátula */
         padding: 20px;
     }
 
     .home-cover h1 {
         font-size: 1.6rem;
         position: relative;
-        z-index: 10; /* El texto siempre por encima de los stickers */
+        z-index: 10;
+        /* El texto siempre por encima de los stickers */
     }
 
     /* 5. Stickers en Móvil: Los hacemos más pequeños y los movemos a las esquinas */
     .sticker {
-        width: 55px !important; /* Tamaño uniforme y pequeño para celular */
-        filter: drop-shadow(2px 3px 4px rgba(0,0,0,0.2));
+        width: 55px !important;
+        /* Tamaño uniforme y pequeño para celular */
+        filter: drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.2));
     }
 
     /* Reposicionamiento estratégico para que no estorben */
-    .s-cafe { top: 5%; left: 5%; transform: rotate(-10deg); }
-    .s-book { top: 20%; left: 2%; transform: rotate(10deg); }
-    .s-clip { top: 2%; right: 10%; width: 35px !important; }
-    .s-pinza { top: 15%; right: 2%; width: 45px !important; }
-    
+    .s-cafe {
+        top: 5%;
+        left: 5%;
+        transform: rotate(-10deg);
+    }
+
+    .s-book {
+        top: 20%;
+        left: 2%;
+        transform: rotate(10deg);
+    }
+
+    .s-clip {
+        top: 2%;
+        right: 10%;
+        width: 35px !important;
+    }
+
+    .s-pinza {
+        top: 15%;
+        right: 2%;
+        width: 45px !important;
+    }
+
     /* El gato y el calendario los dejamos abajo como anclas */
-    .s-gato { bottom: 5%; left: 5%; width: 70px !important; }
-    .s-calendario { bottom: 8%; right: 5%; width: 65px !important; }
-    
+    .s-gato {
+        bottom: 5%;
+        left: 5%;
+        width: 70px !important;
+    }
+
+    .s-calendario {
+        bottom: 8%;
+        right: 5%;
+        width: 65px !important;
+    }
+
     /* Ocultamos uno para que no se vea tan saturado en pantallas mini */
-    .s-ofice { display: none; }
+    .s-ofice {
+        display: none;
+    }
 
     /* 6. Layout del Perfil (por si acaso) */
     .profile-layout {
@@ -383,7 +443,7 @@ body {
 /* -----------------------------------------------------------------web */
 
 /* --- 1. ESTRUCTURA Y CONTENEDORES --- */
-.section-title{
+.section-title {
     text-align: center;
     color: var(--text-main);
 }
@@ -411,12 +471,15 @@ body {
 }
 
 .info-card {
-    background: #f4f1ea; /* Color papel hueso apagado, menos brillante */
+    background: #f4f1ea;
+    /* Color papel hueso apagado, menos brillante */
     border: 1px solid #d1c7bd;
-    border-radius: 2px; /* Menos redondeado para parecer papel cortado */
+    border-radius: 2px;
+    /* Menos redondeado para parecer papel cortado */
     padding: 20px;
     position: relative;
-    box-shadow: 2px 2px 0px rgba(0,0,0,0.05); /* Sombra plana tipo papel */
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.05);
+    /* Sombra plana tipo papel */
 }
 
 .info-card::before {
@@ -432,13 +495,15 @@ body {
     letter-spacing: 2px;
 }
 
-.info-card h3, 
-.info-card p, 
-.info-card li, 
+.info-card h3,
+.info-card p,
+.info-card li,
 .info-card a {
     font-family: 'Courier New', Courier, monospace !important;
-    color: #332d29; /* Un negro/café "tinta" */
-    text-transform: uppercase; /* Los tickets suelen ser en mayúsculas */
+    color: #332d29;
+    /* Un negro/café "tinta" */
+    text-transform: uppercase;
+    /* Los tickets suelen ser en mayúsculas */
     letter-spacing: -0.5px;
 }
 
@@ -477,8 +542,8 @@ body {
 }
 
 
-.email-link a {
-    display: block;
+.email-link {
+    display: inline-block;
     color: #606C38;
     font-weight: bold;
     text-decoration: underline;
@@ -509,7 +574,7 @@ body {
     border: 1px solid rgba(74, 55, 40, 0.1);
     border-radius: 12px;
     padding: 25px;
-    
+
     text-align: center;
 }
 
@@ -529,7 +594,8 @@ body {
 .work-title {
     font-family: 'Georgia', serif;
     font-size: 1.6rem;
-    color: #2C1E14; /* Contraste alto para legibilidad */
+    color: #2C1E14;
+    /* Contraste alto para legibilidad */
     text-align: center;
     margin-top: 40px;
     margin-bottom: 25px;
@@ -608,7 +674,8 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    background: rgba(255, 255, 255, 0.4); /* Fondo sutil para que no se pierda la letra */
+    background: rgba(255, 255, 255, 0.4);
+    /* Fondo sutil para que no se pierda la letra */
     padding: 8px 12px;
     border-radius: 15px;
     font-size: 0.85rem;
@@ -629,7 +696,8 @@ body {
     bottom: 125%;
     left: 50%;
     transform: translateX(-50%) scale(0.9);
-    background: #4A3728; /* Café oscuro sólido para leer bien */
+    background: #4A3728;
+    /* Café oscuro sólido para leer bien */
     color: #FFF;
     padding: 10px;
     border-radius: 8px;
@@ -641,11 +709,11 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: 0.2s ease-in-out;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     pointer-events: none;
 }
 
-.tooltip-container:hover::after, 
+.tooltip-container:hover::after,
 .tooltip-container:active::after {
     opacity: 1;
     visibility: visible;
@@ -764,7 +832,8 @@ body {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #606C38; /* Tu verde oliva característico */
+    background-color: #606C38;
+    /* Tu verde oliva característico */
     color: white;
     border-radius: 25px;
     text-decoration: none;
@@ -777,9 +846,11 @@ body {
 .btn-demo::after {
     content: '';
     position: absolute;
-    top: 0; left: -100%;
-    width: 100%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: 0.5s;
 }
 
@@ -804,7 +875,7 @@ body {
     font-weight: bold;
     text-align: center;
     margin-bottom: 15px;
-    background: rgba(0,0,0,0.05);
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .disclaimer-text p {
@@ -820,31 +891,40 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .dynamics-section {
-    font-family: 'Montserrat', sans-serif; /* Tipografía limpia */
+    font-family: 'Montserrat', sans-serif;
+    /* Tipografía limpia */
 }
 
 .carousel-container {
     position: relative;
-    width: 100%;           /* O el ancho máximo que quieras (ej. 900px) */
-    max-width: 100vw;      /* Crucial: que no sea más ancho que la pantalla */
-    margin: 0 auto;
-    overflow: hidden;      /* ESTO ES LO QUE CORTA LO QUE SOBRA */
-    padding: 20px 0       /* Espacio para que el zoom no se corte arriba/abajo */
+    width: 100%;
+    /* O el ancho máximo que quieras (ej. 900px) */
+    max-width: 100vw;
+    /* Crucial: que no sea más ancho que la pantalla */
+    margin-bottom: 60px;
+    overflow: hidden;
+    /* ESTO ES LO QUE CORTA LO QUE SOBRA */
+    padding: 20px 0;
+    /* Espacio para que el zoom no se corte arriba/abajo */
+
 }
 
 .carousel-track {
     display: flex;
-    gap: 0;                /* Quitamos el gap para controlar el ancho exacto con padding */
+    gap: 0;
+    /* Quitamos el gap para controlar el ancho exacto con padding */
     transition: transform 0.5s ease;
     will-change: transform;
 }
 
-.prev-btn { 
-    left: 10px; /* En lugar de -20px */
+.prev-btn {
+    left: 10px;
+    /* En lugar de -20px */
 }
 
-.next-btn { 
-    right: 10px; /* En lugar de -20px */
+.next-btn {
+    right: 10px;
+    /* En lugar de -20px */
 }
 
 /* --- Tarjetas --- */
@@ -861,7 +941,7 @@ body {
     padding: 0;
     cursor: pointer;
     /* Estado inicial: pequeña y opaca */
-    transform: scale(0.85); 
+    transform: scale(0.85);
     opacity: 0.5;
     transition: all 0.4s ease;
 }
@@ -880,7 +960,8 @@ body {
 
 /* --- Contenido de Tarjeta (Banners y Textos) --- */
 .card-banner {
-    background: linear-gradient(135deg, #d1c7bd 0%, #b8aba0 100%); /* Color base si no hay imagen */
+    background: linear-gradient(135deg, #d1c7bd 0%, #b8aba0 100%);
+    /* Color base si no hay imagen */
     height: 140px;
 }
 
@@ -909,16 +990,18 @@ body {
 .card-header h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    text-transform: none; /* Quitamos las mayúsculas de ticket */
+    text-transform: none;
+    /* Quitamos las mayúsculas de ticket */
     letter-spacing: 0;
 }
 
-.card-content p, .card-content li {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.card-content p,
+.card-content li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 400;
     color: black;
     text-transform: none;
-    text-align:left;
+    text-align: left;
 }
 
 .link-contact {
@@ -930,7 +1013,7 @@ body {
 
 /* --- Navegación --- */
 .carousel-btn {
-position: absolute;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
@@ -948,8 +1031,13 @@ position: absolute;
     transform: translateY(-50%) scale(1.1);
 }
 
-.prev-btn { left: 5px; }
-.next-btn { right: 5px; }
+.prev-btn {
+    left: 5px;
+}
+
+.next-btn {
+    right: 5px;
+}
 
 /* Ajuste del icono dentro del botón */
 .carousel-btn i {
@@ -958,28 +1046,45 @@ position: absolute;
 
 @media (max-width: 768px) {
     .carousel-container {
-        overflow-x: auto; /* IMPORTANTE: Activa el scroll con el dedo */
+        overflow-x: auto;
+        /* IMPORTANTE: Activa el scroll con el dedo */
         scroll-snap-type: x mandatory;
         padding: 10px 0;
         margin-bottom: 40px;
     }
 
     .carousel-track {
-        transform: none !important; /* Desactiva el movimiento de JS para que el dedo mande */
+        transform: none !important;
+        /* Desactiva el movimiento de JS para que el dedo mande */
         padding: 0 20px;
     }
 
     .carousel-card {
-        flex: 0 0 75%; /* Se ve una y un pedacito de la otra */
+        flex: 0 0 75%;
+        /* Se ve una y un pedacito de la otra */
         margin: 0 10px;
-        opacity: 1; /* En móvil mejor que todas brillen */
+        opacity: 1;
+        /* En móvil mejor que todas brillen */
         transform: scale(1);
         scroll-snap-align: center;
     }
 
     .carousel-btn {
-        display: none; /* En móvil las flechas estorban */
+        display: none;
+        /* En móvil las flechas estorban */
     }
+
+    .email-link {
+        display: block;
+        /* Lo hace bloque para que use todo el ancho */
+        word-break: break-all;
+        /* Corta el email en cualquier letra si no cabe */
+        font-size: 0.85rem;
+        /* Un poco más pequeño para ayudar al ajuste */
+        white-space: normal;
+        /* Asegura que no intente quedarse en una sola línea */
+    }
+
 }
 
 /* ====================================================
@@ -990,7 +1095,7 @@ position: absolute;
     justify-content: space-between;
     margin: 8px 0;
     border-bottom: 1px dotted #d1c7bd;
-    
+
 }
 
 .ticket-date {
@@ -1024,11 +1129,11 @@ position: absolute;
     .work-dynamic-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .item-title {
         font-size: 1.1rem;
     }
-    
+
     .header-right {
         gap: 8px;
     }
@@ -1037,10 +1142,11 @@ position: absolute;
 
 /* -----------------------------------------------------------Contacto */
 
-   /* Contenedor Principal */
+/* Contenedor Principal */
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Dos columnas en PC */
+    grid-template-columns: 1fr 1.2fr;
+    /* Dos columnas en PC */
     gap: 30px;
     padding: 40px;
     border-radius: 20px;
@@ -1103,14 +1209,14 @@ position: absolute;
 
 /* Ajuste específico para el área de contacto para que crezca si es necesario */
 #contacto {
-    height: auto !important; 
+    height: auto !important;
     min-height: 600px;
 }
 
 .zoom-widget-area {
     max-height: auto;
     /* Evita que crezca infinitamente */
-    
+
 }
 
 .zoom-widget-area h3 {
@@ -1125,16 +1231,71 @@ position: absolute;
 /* Responsive para Móvil */
 @media (max-width: 768px) {
     .contact-container {
-        grid-template-columns: 1fr; 
-        padding: 20px;
-    }
-    
-    .social-grid {
         grid-template-columns: 1fr;
+        padding-right: 3px;
+        padding-left: 3px;
+        /* Menos padding para no apretar el contenido */
+        margin: 0 auto;
+        /* Centra el contenedor */
+        width: 100%;
+        /* Ocupa el ancho disponible */
+        box-sizing: border-box;
+        text-align: center;
+        /* Centra textos e iconos por defecto */
+    }
+
+    /* Aseguramos que la info de contacto no tenga márgenes raros */
+    .contact-info {
+        padding: 0;
+        margin: 0 auto 30px;
+        /* Espacio antes del calendario */
+        width: 100%;
+    }
+
+    .social-grid {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        /* Dos columnas incluso en móvil se ve más ordenado */
+        gap: 10px;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .social-item {
+        justify-content: center;
+        /* Centra el icono y texto dentro del botón */
+        padding: 12px 5px;
+        /* Ajuste de altura */
+        font-size: 0.8rem;
+        /* Texto un poco más pequeño para que no se rompa */
+        border-radius: 10px;
     }
 
     .calendly-inline-widget {
         height: 650px !important;
+        text-align: center;
+    }
+
+    /* Permitimos que el área del widget crezca libremente */
+    .zoom-widget-area {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    /* Forzamos al iframe de Calendly a ser lo suficientemente alto 
+       para que no necesite su propia barra de scroll */
+    .calendly-inline-widget {
+        height: 950px !important;
+        /* Aumentamos la altura para que quepa todo el mes */
+        overflow: hidden !important;
+        /* Matamos el scroll interno */
+    }
+
+    .calendly-wrapper {
+        border: none;
+        /* Opcional: se ve más limpio en móvil sin bordes extras */
+        overflow: visible !important;
     }
 }
 
