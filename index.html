@@ -14,7 +14,7 @@
 
     <div class="desktop-container">
         <div class="brand-header">
-            <img src="img/elelogo.png" alt="Logo" class="main-logo">
+            <img src="img/elelogo.png" alt="elelogo" class="main-logo">
         </div>
 
         <div class="folder-tabs">
@@ -28,29 +28,31 @@
             <button class="tab-btn" data-target="servicios" style="--tab-color: #8D6E63; color: white;">
                 <i class="fas fa-code"></i> <span>Servicios Web</span>
             </button>
+            <button class="tab-btn" data-target="proyectos" style="--tab-color: #606C38; color: white;">
+                <i class="fas fa-flask"></i> <span>Proyectos</span>
+            </button>
             <button class="tab-btn" data-target="contacto" style="--tab-color: #F5F5DC;">
                 <i class="fas fa-envelope"></i> <span>Contacto</span>
             </button>
         </div>
 
+        <div class="folder-content" id="folderBody">
+
+            <div id="caratula" class="tab-content active">
+                <div class="home-cover">
+                    <img src="img/sticker7.png" class="sticker s-clip" alt="clip">
+                    <img src="img/sticker3.png" class="sticker s-cafe" alt="sticker cafe">
+                    <img src="img/sticker5.png" class="sticker s-calendario" alt="sticker calendario">
+                    <img src="img/sticker4.png" class="sticker s-gato" alt="sticker gato">
+                    <img src="img/sticker1.png" class="sticker s-ofice" alt="ofice">
+                    <img src="img/sticker2.png" class="sticker s-book" alt="book">
+                    <img src="img/sticker6.png" class="sticker s-pinza" alt="pinza">
 
 
-<div class="folder-content" id="folderBody">
-    <div id="caratula" class="tab-content active">
-        <div class="home-cover">
-            <img src="img/sticker7.png" class="sticker s-clip" alt="clip">
-            <img src="img/sticker3.png" class="sticker s-cafe" alt="sticker cafe">
-            <img src="img/sticker5.png" class="sticker s-calendario" alt="sticker calendario">
-            <img src="img/sticker4.png" class="sticker s-gato" alt="sticker gato">
-            <img src="img/sticker1.png" class="sticker s-ofice" alt="ofice">
-            <img src="img/sticker2.png" class="sticker s-book" alt="book">
-            <img src="img/sticker6.png" class="sticker s-pinza" alt="pinza">
-
-            
-            <h1>Bienvenido a mi Portfolio</h1>
-            <p>Selecciona una pestaña para explorar mi trabajo.</p>
-        </div>
-    </div>
+                    <h1>Bienvenido a mi Portfolio</h1>
+                    <p>Selecciona una pestaña para explorar mi trabajo.</p>
+                </div>
+            </div>
 
 
             <div id="perfil" class="tab-content">
@@ -58,7 +60,7 @@
                     <div class="collage-container">
                         <div class="tape tape-top-right"></div>
                         <div class="polaroid-frame">
-                            <img src="img/perfil.jpeg" alt="Edith González" class="profile-photo">
+                            <img src="img/perfil.jpeg" alt="ele.jfif" class="profile-photo">
                         </div>
                         <div class="post-it">
                             <i class="fas fa-thumbtack pin"></i>
@@ -111,25 +113,26 @@
                 </div>
             </div>
 
-
             <div id="servicios" class="tab-content">
                 <div class="menu-board">
-                    <h2 class="section-title">Páginas Web</h2>
-                    <p class="menu-intro">Selecciona la mejor opción para tu proyecto</p>
+                    <h2 class="section-title">Servicios Web</h2>
+                    <p class="menu-intro">Selecciona los módulos para integrar en tu expediente de proyecto</p>
 
                     <div class="accordion-container">
                         <div class="accordion-item">
                             <button class="accordion-header">
-                                <span class="item-title">☕ 1. One Page</span>
+                                <span class="item-title">
+                                    <input type="checkbox" class="service-check" data-name="One Page" data-price="3500">
+                                    ☕ 1. One Page
+                                </span>
                                 <div class="header-right">
-                                    <span class="item-price">$3,500</span>
                                     <i class="fas fa-chevron-down chevron"></i>
                                 </div>
                             </button>
                             <div class="accordion-panel">
                                 <p>Sitio de una sola página tipo scroll. Ideal para una presentación clara y directa.
                                 </p>
-                                <p>Esta pagina es un ejemplo de este modelo.</p>
+                                <p><strong>Esta página es un ejemplo de este modelo.</strong></p>
                                 <p class="package-unique"><strong>Ideal para:</strong> Navegación fluida en un solo
                                     tiempo.</p>
                             </div>
@@ -137,9 +140,11 @@
 
                         <div class="accordion-item">
                             <button class="accordion-header">
-                                <span class="item-title">🗂️ 2. Sitio Base</span>
+                                <span class="item-title">
+                                    <input type="checkbox" class="service-check" data-name="Sitio Base"
+                                        data-price="7500"> 🗂️ 2. Sitio Base
+                                </span>
                                 <div class="header-right">
-                                    <span class="item-price">$7,500</span>
                                     <i class="fas fa-chevron-down chevron"></i>
                                 </div>
                             </button>
@@ -153,9 +158,11 @@
 
                         <div class="accordion-item">
                             <button class="accordion-header">
-                                <span class="item-title">🧩 3. Sitio Completo</span>
+                                <span class="item-title">
+                                    <input type="checkbox" class="service-check" data-name="Sitio Completo"
+                                        data-price="12000"> 🧩 3. Sitio Completo
+                                </span>
                                 <div class="header-right">
-                                    <span class="item-price">$12,000</span>
                                     <i class="fas fa-chevron-down chevron"></i>
                                 </div>
                             </button>
@@ -167,13 +174,14 @@
                             </div>
                         </div>
 
-
                         <div class="accordion-item special-roast active">
                             <button class="accordion-header">
-                                <span class="item-title">🚀 4. Sitio Avanzado</span>
+                                <span class="item-title">
+                                    <input type="checkbox" class="service-check" data-name="Sitio Avanzado"
+                                        data-price="18000"> 🚀 4. Sitio Avanzado
+                                </span>
                                 <div class="header-right">
-                                    <span class="badge-gold">Best Experience</span>
-                                    <span class="item-price">$18,000</span>
+                                    <span class="badge-gold">Premium</span>
                                     <i class="fas fa-chevron-down chevron"></i>
                                 </div>
                             </button>
@@ -182,7 +190,7 @@
                                     <div class="ultra-text">
                                         <p>Home + 15 a 30 páginas. Navegación compleja y personalización total.</p>
                                         <p><em>Ideal para: Proyectos de gran escala o instituciones.</em></p>
-                                        <a href="https://thiagomar.netlify.app" target="_blank" class="btn-demo">
+                                        <a href="https://thiagomar.netlify.app" target="_blank" class="btn-thesis">
                                             Ver Demo Real <i class="fas fa-external-link-alt"></i>
                                         </a>
                                     </div>
@@ -193,6 +201,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="all-inclusive-section">
                         <h3><i class="fas fa-check-circle"></i> Todos los paquetes incluyen:</h3>
                         <div class="highlights-grid">
@@ -212,143 +221,263 @@
                         </div>
                     </div>
 
-<section class="dynamics-section">
-    <h2 class="work-title">Dinámica de Trabajo</h2>
-    
-    <div class="carousel-container">
-        <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-        <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
-
-        <div class="carousel-track">
-            
-            <div class="carousel-card info-card">
-                <div class="card-banner">
-                    <img src="img/def.jpg" alt="Sesiones" class="banner-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fas fa-calendar-alt"></i>
-                        <h3>Sesiones de diseño</h3>
-                    </div>
-                    <ol>
-                        <li>Definición de necesidades.</li>
-                        <li>Revisión de avances.</li>
-                        <li>Entrega final.</li>
-                    </ol>
-                    <p class="card-note">* Fines de semana.</p>
-                </div>
-            </div>
-
-            <div class="carousel-card info-card">
-                <div class="card-banner">
-                    <img src="img/comunicacion.jpg" alt="Banner Comunicación" class="banner-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fas fa-comments"></i>
-                        <h3>Comunicación</h3>
-                    </div>
-                    <p>Seguimiento, lluvia de ideas y dudas por <a href="#contacto" class="link-contact">Telegram</a> (tiempos de respuesta según horarios laborales).</p>
-                </div>
-            </div>
-
-            <div class="carousel-card info-card">
-                <div class="card-banner">
-                    <img src="img/sesion.jpg" alt="Banner Hosting" class="banner-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fas fa-server"></i>
-                        <h3>Hosting y Dominio</h3>
-                    </div>
-                    <p>La web se implementa en <strong>Netlify</strong> (opción gratuita). El dominio corre por cuenta del cliente con acompañamiento sin costo.</p>
-                    <p class="card-warning">TRÁFICO ALTO PUEDE GENERAR COSTOS EXTRAS.</p>
-                </div>
-            </div>
-
-            <div class="carousel-card info-card highlight-card">
-                <div class="card-banner">
-                    <img src="img/info.jpg" alt="Banner Información" class="banner-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <i class="fas fa-envelope-open-text"></i>
-                        <h3>Información</h3>
-                    </div>
-                    <p>El contenido formal (textos, imágenes, enlaces) se recibe por correo:</p>
-                    <a href="mailto:gonzalezeledith@gmail.com" class="email-link">gonzalezeledith@gmail.com</a>
-                    <p class="subject-line">Asunto: Pagina web - tu nombre.</p>
-                </div>
-            </div>
-
-        </div> </div> </section>
+                    <section class="dynamics-section">
+                        <h2 class="work-title">Dinámica de Trabajo</h2>
+                        <div class="carousel-container">
+                            <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                            <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                            <div class="carousel-track">
+                                <div class="carousel-card info-card">
+                                    <div class="card-banner"><img src="img/def.jpg" alt="Sesiones" class="banner-img">
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="card-header"><i class="fas fa-calendar-alt"></i>
+                                            <h3>Sesiones</h3>
+                                        </div>
+                                        <ul>
+                                            <li>Definición de necesidades.</li>
+                                            <li>Revisión de avances.</li>
+                                            <li>Entrega final.</li>
+                                        </ul>
+                                        <p class="subject-line">* Preferentemente fines de semana.</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="carousel-card info-card">
+                                    <div class="card-banner"><img src="img/comunicacion.jpg" alt="Comunicación"
+                                            class="banner-img"></div>
+                                    <div class="card-content">
+                                        <div class="card-header"><i class="fas fa-comments"></i>
+                                            <h3>Comunicación</h3>
+                                        </div>
+                                        <p>Seguimiento, lluvia de ideas y dudas por <a href="https://t.me/eledithgs"
+                                                class="link-contact">Telegram</a>.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-card info-card">
+                                    <div class="card-banner"><img src="img/sesion.jpg" alt="Hosting" class="banner-img">
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="card-header"><i class="fas fa-server"></i>
+                                            <h3>Hosting y Dominio</h3>
+                                        </div>
+                                        <p>La web se implementa en <strong>Netlify</strong>. El dominio corre por cuenta
+                                            del cliente.</p>
+                                            <p class="subject-line">TRÁFICO ALTO PUEDE GENERAR COSTOS EXTRAS.</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="carousel-card info-card highlight-card">
+                                    <div class="card-banner"><img src="img/info.jpg" alt="Información"
+                                            class="banner-img"></div>
+                                    <div class="card-content">
+                                        <div class="card-header"><i class="fas fa-envelope-open-text"></i>
+                                            <h3>Información</h3>
+                                        </div>
+                                        <p>Contenido formal se recibe por correo:</p>
+                                        <a href="mailto:gonzalezeledith@gmail.com"
+                                            class="email-link">gonzalezeledith@gmail.com</a>
+                                        <p class="subject-line">Asunto: Pagina web - tu nombre.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                     <div class="info-card ticket-style">
-                        <div class="card-header">
-                            <i class="fas fa-receipt"></i>
+                        <div class="card-header"><i class="fas fa-receipt"></i>
                             <h3>RESUMEN DE CUENTA</h3>
                         </div>
                         <p class="ticket-date">@ELEDITHGS - SERVICIOS WEB</p>
                         <div class="card-divider"></div>
                         <div class="ticket-section">
                             <p class="section-title">Actualizaciones y Cambios</p>
-                            <div class="price-row"><span>Cambio individual</span><span>$100.00</span></div>
-                            <div class="price-row"><span>Solicitud agrupada</span><span>$250.00</span></div>
-                            <div class="price-row"><span>Funciones nuevas</span><span>$250.00/hr</span></div>
+                            <div class="price-row"><span>Cambio individual</span><span class="status-badge">Cotización
+                                    previa</span></div>
+                            <div class="price-row"><span>Solicitud agrupada</span><span class="status-badge">Bajo
+                                    contrato</span></div>
+                            <div class="price-row"><span>Funciones nuevas</span><span class="status-badge">Hora
+                                    técnica</span></div>
                         </div>
                         <div class="card-divider"></div>
                         <div class="ticket-section disclaimer-text">
-                            <p><strong>* NOTA:</strong> NO REALIZO DISEÑO DE LOGOS O BRANDING.</p>
+                            <p class="subject-line">NOTA: NO REALIZO DISEÑO DE LOGOS O BRANDING.</p>
+                            <button onclick="prepararCotizacion()" class="btn-link btn-thesis"
+                                style="width: 100%; justify-content: center; border: none; cursor: pointer; margin-top: 20px;">
+                                <i class="fas fa-file-invoice-dollar"></i> GENERAR PRESUPUESTO
+                            </button>
+
                         </div>
+
                     </div>
                 </div>
             </div>
+
+
+
+            <div id="proyectos" class="tab-content">
+                <div class="projects-container">
+                    <h2 class="section-title">Proyectos</h2>
+
+                    <div class="project-timeline">
+
+
+                        <div class="log-entry">
+                            <div class="log-date">MoodleMoot 2025</div>
+                            <div class="log-card">
+                                <h3><i class="fas fa-robot"></i> Tallerista en MoodleMoot México</h3>
+                                <p>Impartición del taller <strong>"Diversificando Exámenes con Inteligencia
+                                        Artificial"</strong>. Innovación en evaluación para entornos LMS.</p>
+
+                                <div class="linkedin-short-container">
+                                    <iframe
+                                        src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7400285894693318656?collapsed=1"
+                                        height="530" width="100%" frameborder="0" allowfullscreen=""
+                                        title="Post MoodleMoot"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="log-entry">
+                            <div class="log-date">Eventos</div>
+                            <div class="log-card">
+                                <h3><i class="fas fa-microphone"></i> Entrevista y Difusión</h3>
+                                <p>Participación en espacios de difusión académica compartiendo la experiencia entre las
+                                    matemáticas y el desarrollo tecnológico.</p>
+
+                                <div class="media-gallery">
+                                    <div class="media-item video-center">
+                                        <p class="media-label"><i class="fas fa-play-circle"></i> Video Promocional</p>
+                                        <div class="video-wrapper">
+                                            <video controls width="100%" class="media-video" poster="img/ciencia.jpg">
+                                                <source src="img/promo_joven.mp4" type="video/mp4">
+                                                Tu navegador no soporta la reproducción de video.
+                                            </video>
+                                        </div>
+                                    </div>
+
+                                    <div class="media-item">
+                                        <p class="media-label"><i class="fas fa-volume-up"></i> Programa Completo
+                                            (Audio)</p>
+                                        <audio controls class="media-audio">
+                                            <source src="img/ciencia_joven.mp3.opdownload" type="audio/mpeg">
+                                            Tu navegador no soporta la reproducción de audio.
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="log-entry">
+                            <div class="log-date">Investigación</div>
+                            <div class="log-card">
+                                <h3><i class="fas fa-chart-bar"></i> Tesis Profesional (Lic. MAC)</h3>
+                                <p><strong>"Estrés, ansiedad y depresión en estudiantes universitarios durante la
+                                        pandemia de COVID-19"</strong></p>
+                                <p>Estudio estadístico y computacional sobre el impacto de la salud mental en la
+                                    comunidad universitaria.</p>
+
+                                <p class="log-authors"><i class="fas fa-users"></i> González Sánchez Andrea Eledith |
+                                    Jiménez Uc José Faustino</p>
+
+                                <div class="project-links">
+                                    <a href="https://research.ebsco.com/linkprocessor/plink?id=74f15c85-e154-3bc8-a9dc-5e75348c6e81"
+                                        target="_blank" class="btn-link btn-thesis">
+                                        <i class="fas fa-graduation-cap"></i> LEER INVESTIGACIÓN COMPLETA
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
             <div id="contacto" class="tab-content">
                 <div class="contact-container">
-                    <div class="contact-info">
-                        <i class="fas fa-mug-hot cta-icon-main"></i>
-                        <h2>¿Tomamos un café?</h2>
-                        <p>Escríbeme por tu red favorita o agendemos una videollamada.</p>
+                    <div class="contact-card">
+                        <div class="contact-header">
+                            <h2 class="section-title">Contacto</h2>
+                            <p>¿Tienes un proyecto en mente? Hagamos equipo.</p>
+                        </div>
 
                         <div class="social-grid">
-                            <a href="https://instagram.com/eledithgs" target="_blank" class="social-item">
-                                <i class="fab fa-instagram"></i> Instagram
+                            <a href="https://github.com/eledithgs" target="_blank" class="social-item github">
+                                <i class="fab fa-github"></i> GitHub
                             </a>
-                            <a href="https://linkedin.com/in/eledith-gonzalez-a93b34214/" target="_blank" class="social-item">
+                            <a href="https://linkedin.com/in/eledith-gonzalez-a93b34214/" target="_blank"
+                                class="social-item linkedin">
                                 <i class="fab fa-linkedin-in"></i> LinkedIn
-                            </a>
-                            <a href="https://t.me/eledithgs" target="_blank" class="social-item">
-                                <i class="fab fa-telegram-plane"></i> Telegram
                             </a>
                             <a href="mailto:gonzalezeledith@gmail.com" class="social-item email">
                                 <i class="fas fa-envelope"></i> Correo
                             </a>
+                            <a href="https://t.me/eledithgs" target="_blank" class="social-item telegram">
+                                <i class="fab fa-telegram-plane"></i> Telegram
+                            </a>
+                            <a href="https://instagram.com/eledithgs" target="_blank" class="social-item instagram">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                        </div>
+
+                        <div class="contact-footer">
+                            <p>Ubicada en México | Disponible para remoto</p>
                         </div>
                     </div>
-
-                    <div class="zoom-widget-area">
-                        <h3>Agendar Sesión</h3>
-                        <div id="calendar-placeholder">
-                            <p><i class="fas fa-video"></i> Selecciona un fin de semana para platicar.</p>
-                            <div class="fake-widget">
-                                <div class="calendly-inline-widget"
-                                    data-url="https://calendly.com/gonzalezeledith/30min?text_color=66553a&primary_color=3e683e"
-                                    style="min-width:320px;height:700px;"></div>
-                                <script type="text/javascript"
-                                    src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
+
+
+
+
+
         </div>
         <footer class="footer">
             <p>&copy; 2026 Eledith González </p>
         </footer>
     </div>
     <script src="js/main.js"></script>
+
+    <div id="modalCotizacion" class="modal">
+        <div class="modal-content ticket-style">
+            <span class="close-modal">&times;</span>
+
+            <div class="card-header">
+                <i class="fas fa-receipt"></i>
+                <h3>RESUMEN DE CUENTA</h3>
+            </div>
+            <p class="ticket-date">@ELEDITHGS - SERVICIOS WEB</p>
+
+            <div id="detalleCotizacion">
+            </div>
+
+            <div class="card-divider"></div>
+
+            <div class="extras-section">
+                <p class="media-label">Actualizaciones y Cambios</p>
+                <div class="price-row"><span>Cambio individual</span> <span>$100.00</span></div>
+                <div class="price-row"><span>Solicitud agrupada</span> <span>$250.00</span></div>
+                <div class="price-row"><span>Funciones nuevas</span> <span>$250.00/hr</span></div>
+            </div>
+
+            <div class="card-divider"></div>
+
+            <div class="price-row" style="font-weight: bold; font-size: 1.2rem;">
+                <span>TOTAL ESTIMADO</span>
+                <span id="precioTotal">$0</span>
+            </div>
+
+            <p class="card-note">* Los precios de cambios aplican post-entrega.</p>
+
+            <button onclick="enviarCorreo()" class="btn-demo" style="width: 100%; margin-top: 15px;">
+                SOLICITAR REVISIÓN <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
 </body>
 
 </html>
