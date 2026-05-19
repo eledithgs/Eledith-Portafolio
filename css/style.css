@@ -236,6 +236,16 @@ body {
     align-items: start;
 }
 
+.subtitle {
+    
+    font-size: 1rem;
+    line-height: 1.7; /* Da aire entre líneas para que sea cómodo de leer */
+    color: #332d29;    /* Color tinta de tu paleta */
+    text-align: justify; /* Justifica el texto para que quede alineado en los bordes */
+    max-width: 750px;  /* Evita que el párrafo se estire horrible en monitores grandes */
+    margin: 20px auto; /* Lo centra automáticamente en la pantalla */
+}
+
 /* --- Collage & Polaroid --- */
 .collage-container {
     position: relative;
@@ -262,14 +272,26 @@ body {
 .post-it {
     position: absolute;
     background-color: #FFF9C4;
-    padding: 15px;
-    width: 160px;
-    bottom: -40px;
-    right: -20px;
+    padding: 12px;
+    width: 145px;          /* Lo hacemos un poquito más angosto */
+    bottom: -60px;         /* Lo bajamos más (antes estaba en -40px) */
+    right: -45px;          /* Lo aventamos más a la derecha (antes -20px) */
     border-radius: 3px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-    transform: rotate(5deg);
+    transform: rotate(6deg); /* Le damos una rotación ligeramente mayor para el efecto */
     z-index: 2;
+}
+
+/* Ajuste extra: para que el texto largo no sature el Post-it */
+.post-it p {
+    font-size: 0.75rem !important; /* Letra un poquitito más chica */
+    line-height: 1.25 !important;  /* Interlineado más compacto */
+    margin-bottom: 8px !important;
+}
+
+.post-it h4 {
+    font-size: 0.9rem !important;
+    margin-bottom: 10px !important;
 }
 
 /* --- Skills & Chips --- */
